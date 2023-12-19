@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <TextView
+
+        android:id="@+id/tvNewInThisMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_thin"
+        android:text="Newst"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <HorizontalScrollView
+
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNewInThisMonth">
+
+
+        <LinearLayout
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/g_card_background"
+            android:isScrollContainer="true"
+            android:orientation="horizontal"
+            app:elevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@id/tvNewInThisMonth">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="114dp"
+                    android:layout_height="108dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/book1"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linear_product_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/img_product"
+                    app:layout_constraintStart_toStartOf="@id/img_product"
+                    app:layout_constraintTop_toBottomOf="@id/img_product">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Chair"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="$1600"
+
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toStartOf="@id/img_product"
+                    app:layout_constraintTop_toBottomOf="@id/linear_product_name" />
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/addtocart1"
+                    style="@style/blueButtonStyle"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Add to cart"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_price"
+                    app:layout_constraintVertical_bias="0.481" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainlayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+                <ImageView
+                    android:id="@+id/img_product1"
+                    android:layout_width="114dp"
+                    android:layout_height="108dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/book2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linear_product_name1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/img_product1"
+                    app:layout_constraintStart_toStartOf="@id/img_product1"
+                    app:layout_constraintTop_toBottomOf="@id/img_product1">
+
+                    <TextView
+                        android:id="@+id/tv_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Chair"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+
+                    android:id="@+id/tv_price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="$1600"
+
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toStartOf="@id/img_product1"
+                    app:layout_constraintTop_toBottomOf="@id/linear_product_name1" />
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/addtocart3"
+                    style="@style/blueButtonStyle"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Add to cart"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_price2"
+                    app:layout_constraintVertical_bias="0.481" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+                <ImageView
+                    android:id="@+id/img_product2"
+                    android:layout_width="114dp"
+                    android:layout_height="108dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/book3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linear_product_name2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/img_product2"
+                    app:layout_constraintStart_toStartOf="@id/img_product2"
+                    app:layout_constraintTop_toBottomOf="@id/img_product2">
+
+                    <TextView
+                        android:id="@+id/tv_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Chair"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+
+                    android:id="@+id/tv_price3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="$1600"
+
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toStartOf="@id/img_product2"
+                    app:layout_constraintTop_toBottomOf="@id/linear_product_name2" />
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/addtocart2"
+                    style="@style/blueButtonStyle"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Add to cart"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_price3"
+                    app:layout_constraintVertical_bias="0.481" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainlayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+                <ImageView
+                    android:id="@+id/img_product4"
+                    android:layout_width="114dp"
+                    android:layout_height="108dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/book4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linear_product_name4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/img_product4"
+                    app:layout_constraintStart_toStartOf="@id/img_product4"
+                    app:layout_constraintTop_toBottomOf="@id/img_product4">
+
+                    <TextView
+                        android:id="@+id/tv_name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Chair"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+
+                    android:id="@+id/tv_price4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="$1600"
+
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toStartOf="@id/img_product4"
+                    app:layout_constraintTop_toBottomOf="@id/linear_product_name4" />
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/addtocart4"
+                    style="@style/blueButtonStyle"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Add to cart"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_price4"
+                    app:layout_constraintVertical_bias="0.481" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainlayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="25dp"
+
+                android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+                <ImageView
+                    android:id="@+id/img_product5"
+                    android:layout_width="114dp"
+                    android:layout_height="108dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/book5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linear_product_name5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/img_product5"
+                    app:layout_constraintStart_toStartOf="@id/img_product5"
+                    app:layout_constraintTop_toBottomOf="@id/img_product5">
+
+                    <TextView
+                        android:id="@+id/tv_name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Chair"
+
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+
+                    android:id="@+id/tv_price5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/sf_pro_display"
+                    android:text="$1600"
+
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+
+                    app:layout_constraintStart_toStartOf="@id/img_product5"
+                    app:layout_constraintTop_toBottomOf="@id/linear_product_name5" />
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/addtocart5"
+                    style="@style/blueButtonStyle"
+                    android:layout_width="115dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Add to cart"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_price5"
+                    app:layout_constraintVertical_bias="0.481" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+
+        android:id="@+id/best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_thin"
+        android:text="Best Seller"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
+
+        app:layout_constraintVertical_bias="0.803" />
+
+    <LinearLayout
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/g_card_background"
+        android:isScrollContainer="true"
+        android:orientation="horizontal"
+        app:elevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toBottomOf="@id/best">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainlayout10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+
+            android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+            <ImageView
+                android:id="@+id/img_product10"
+                android:layout_width="114dp"
+                android:layout_height="108dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/book1"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linear_product_name10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/img_product10"
+                app:layout_constraintStart_toStartOf="@id/img_product10"
+                app:layout_constraintTop_toBottomOf="@id/img_product10">
+
+                <TextView
+                    android:id="@+id/tv_name10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Chair"
+
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/tv_price10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="$1600"
+
+                android:textColor="@color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintStart_toStartOf="@id/img_product10"
+                app:layout_constraintTop_toBottomOf="@id/linear_product_name10" />
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/addtocart10"
+                style="@style/blueButtonStyle"
+                android:layout_width="115dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Add to cart"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_price10"
+                app:layout_constraintVertical_bias="0.481" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainlayout11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+
+            android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+            <ImageView
+                android:id="@+id/img_product11"
+                android:layout_width="114dp"
+                android:layout_height="108dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/book1"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linear_product_name11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/img_product11"
+                app:layout_constraintStart_toStartOf="@id/img_product11"
+                app:layout_constraintTop_toBottomOf="@id/img_product11">
+
+                <TextView
+                    android:id="@+id/tv_name11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Chair"
+
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/tv_price11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="$1600"
+
+                android:textColor="@color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintStart_toStartOf="@id/img_product11"
+                app:layout_constraintTop_toBottomOf="@id/linear_product_name11" />
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/addtocart11"
+                style="@style/blueButtonStyle"
+                android:layout_width="115dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Add to cart"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_price11"
+                app:layout_constraintVertical_bias="0.481" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainlayout12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+
+            android:scrollbarAlwaysDrawHorizontalTrack="true">
+
+            <ImageView
+                android:id="@+id/img_product12"
+                android:layout_width="114dp"
+                android:layout_height="108dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/book1"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linear_product_name12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/img_product12"
+                app:layout_constraintStart_toStartOf="@id/img_product12"
+                app:layout_constraintTop_toBottomOf="@id/img_product12">
+
+                <TextView
+                    android:id="@+id/tv_name12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Chair"
+
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/tv_price12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/sf_pro_display"
+                android:text="$1600"
+
+                android:textColor="@color/black"
+                android:textSize="12sp"
+
+                app:layout_constraintStart_toStartOf="@id/img_product12"
+                app:layout_constraintTop_toBottomOf="@id/linear_product_name12" />
+
+            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/addtocart12"
+                style="@style/blueButtonStyle"
+                android:layout_width="115dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Add to cart"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_price12"
+                app:layout_constraintVertical_bias="0.481" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+

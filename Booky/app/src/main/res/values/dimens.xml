@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tvRightAddressMargin">115dp</dimen>
+    <dimen name="smallButtonWidth">130dp</dimen>
+    <dimen name="smallButtonHeight">55dp</dimen>
+    <dimen name="buttonCorners">5dp</dimen>
+    <dimen name="buttonCorner">10dp</dimen>
+    <dimen name="buttonCorne">20dp</dimen>
+    <dimen name="editTextHeight">60dp</dimen>
+    <dimen name="mediumButtonHeight">55dp</dimen>
+    <dimen name="buttonCorn">55dp</dimen>
+    <dimen name="buttonCor">25dp</dimen>
+    <dimen name="buttonCornerr">20dp</dimen>
+</resources>
